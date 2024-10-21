@@ -18,6 +18,11 @@ mongoose.connect(mongoURI)
    .then(() => console.log('MongoDB connected successfully'))
    .catch(err => console.error('MongoDB connection error:', err));
 
+// Root Route to display the message
+app.get('/', (req, res) => {
+    res.json({ message: "Welcome to DressStore Application." });
+  });
+
 // Use routes
 app.use('/api', contactRoutes); 
 app.use('/api', userRoutes); 

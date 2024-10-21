@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: true, // Ensures emails are unique
+        unique: true, 
     },
     password: {
         type: String,
@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
     },
     created: {
         type: Date,
-        default: Date.now, // Automatically sets the creation date
+        default: Date.now, 
     },
     updated: {
         type: Date,
